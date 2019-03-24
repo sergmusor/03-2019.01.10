@@ -1,10 +1,10 @@
 #! /bin/sh -e
 
+baseurl='https://api.bintray.com/content'
+project='03-2019.01.10'
 name='ipfilter'
 version="0.0.$1"
-baseurl='https://api.bintray.com/content'
 user='sergmusor'
-project='03-2019.01.10'
 
 for component in prog lib; do
 	package="${name}-${component}_${version}_amd64.deb"
