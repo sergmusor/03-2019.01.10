@@ -23,7 +23,7 @@ deploy:
     - curl -T "ipfilter-prog_0.0.${TRAVIS_BUILD_NUMBER}_amd64.deb" -u sergmusor:"$BINTRAY_API_KEY" "https://api.bintray.com/content/sergmusor/03-2019.01.10/ipfilter/0.0.${TRAVIS_BUILD_NUMBER}/pool/main/i/ipfilter/ipfilter-prog_0.0.${TRAVIS_BUILD_NUMBER}_amd64.deb;deb_distribution=xenial;deb_component=main;deb_architecture=amd64;publish=1" -T "ipfilter-lib_0.0.${TRAVIS_BUILD_NUMBER}_amd64.deb" -u sergmusor:"$BINTRAY_API_KEY" "https://api.bintray.com/content/sergmusor/03-2019.01.10/ipfilter/0.0.${TRAVIS_BUILD_NUMBER}/pool/main/i/ipfilter/ipfilter-lib_0.0.${TRAVIS_BUILD_NUMBER}_amd64.deb;deb_distribution=xenial;deb_component=main;deb_architecture=amd64;publish=1"
 deploy:
   provider: pages
-  local-dir: doxy/html
+  local-dir: html
   skip_cleanup: true
   github-token: $GITHUB_TOKEN
   keep_history: true
