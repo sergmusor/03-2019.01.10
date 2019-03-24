@@ -20,6 +20,8 @@ deploy:
     skip_cleanup: true
     debug: on
     script: bash ./deploy.sh "$TRAVIS_BUILD_NUMBER" "$BINTRAY_API_KEY"
+    on:
+      branch: master
   - provider: pages
     local-dir: html
     skip_cleanup: true
