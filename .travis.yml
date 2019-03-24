@@ -25,7 +25,7 @@ deploy:
   - provider: pages
     local-dir: html
     skip_cleanup: true
-    github-token: $GITHUB_TOKEN
+    github-token: "$GITHUB_TOKEN"
     keep_history: true
     verbose: true
     on:
