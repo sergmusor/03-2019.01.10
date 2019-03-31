@@ -2,6 +2,7 @@ language: cpp
 dist: xenial
 addons:
   apt:
+    update: true
     sources:
       - ubuntu-toolchain-r-test
     packages:
@@ -12,6 +13,8 @@ addons:
       - doxygen
       - graphviz
 before_script:
+- apt-get purge g++-5
+- apt-get autoremove
 - pushd /usr/src/gtest
 - sudo cmake .
 - sudo cmake --build . -- -j "`nproc`"
