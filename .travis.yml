@@ -1,5 +1,11 @@
 language: cpp
 dist: xenial
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-8
 before_script:
 - sudo apt-add-repository -y "deb http://archive.ubuntu.com/ubuntu xenial main universe"
 - sudo apt-get install -y libgtest-dev build-essential cmake doxygen graphviz
