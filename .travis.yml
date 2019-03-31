@@ -12,10 +12,9 @@ addons:
       - cmake
       - doxygen
       - graphviz
-env:
-- TRAVIS_COMPILER=g++-8
 before_install:
-- TRAVIS_COMPILER=g++-8
+- export CC=gcc-8
+- export CXX=g++-8
 before_script:
 - pushd /usr/src/gtest
 - sudo cmake .
