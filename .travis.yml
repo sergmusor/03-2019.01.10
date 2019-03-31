@@ -11,6 +11,12 @@ addons:
       - cmake
       - doxygen
       - graphviz
+before_script:
+- pushd /usr/src/gtest
+- sudo cmake .
+- sudo cmake --build . -- -j "`nproc`"
+- sudo cp *.a /usr/lib
+- popd
 script:
 - cmake -D BUILD_TYPE_RELEASE=ON .
 - cmake --build . -- -j "`nproc`"
