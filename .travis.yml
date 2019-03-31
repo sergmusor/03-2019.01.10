@@ -19,8 +19,7 @@ before_script:
 - sudo cp *.a /usr/lib
 - popd
 script:
-- export CC=gcc-8
-- export CXX=g++-8
+- export TRAVIS_COMPILER=g++-8
 - cmake -D BUILD_TYPE_RELEASE=ON .
 - cmake --build . -- -j "`nproc`"
 - cmake --build . --target test -- -j "`nproc`"
