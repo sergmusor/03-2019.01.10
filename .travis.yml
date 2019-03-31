@@ -13,7 +13,6 @@ addons:
       - doxygen
       - graphviz
 before_script:
-- sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 60 --slave /usr/bin/g++ g++ /usr/bin/g++-8
 - pushd /usr/src/gtest
 - sudo cmake .
 - sudo cmake --build . -- -j "`nproc`"
