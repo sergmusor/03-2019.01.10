@@ -12,6 +12,8 @@ addons:
       - cmake
       - doxygen
       - graphviz
+env:
+- TRAVIS_COMPILER=g++-8
 before_script:
 - pushd /usr/src/gtest
 - sudo cmake .
@@ -19,7 +21,6 @@ before_script:
 - sudo cp *.a /usr/lib
 - popd
 script:
-- export TRAVIS_COMPILER=g++-8
 - cmake -D BUILD_TYPE_RELEASE=ON .
 - cmake --build . -- -j "`nproc`"
 - cmake --build . --target test -- -j "`nproc`"
